@@ -17,8 +17,9 @@ fi
 echo "Latest nightly updated to $LATEST_NIGHTLY"
 
 git add "$BUILD_FILE"
-git commit \
+git \
   -c user.name="GitHub Actions" \
   -c user.email="nki@fastmail.com" \
+  commit \
   -m "Update Scala version to $LATEST_NIGHTLY"
 git push
