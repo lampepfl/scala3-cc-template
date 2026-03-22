@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: coursier/cache-action@v8
       - uses: VirtusLab/scala-cli-setup@v1.12
       - name: Run update script
         run: .github/scripts/update-build-version.sh
