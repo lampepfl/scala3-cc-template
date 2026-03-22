@@ -1,5 +1,5 @@
-val scala3Version = "3.8.0-RC1-bin-20250819-1f13619-NIGHTLY"
-ThisBuild / resolvers += ("Artifactory" at "https://repo.scala-lang.org/artifactory/maven-nightlies/")
+val scala3Version = "3.8.4-RC1-bin-20260322-102c7c6-NIGHTLY"
+ThisBuild / resolvers += Resolver.scalaNightlyRepository
 
 lazy val root = project
   .in(file("."))
