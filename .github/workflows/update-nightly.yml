@@ -3,7 +3,10 @@ name: Daily Version Update
 on:
   schedule:
     - cron: "0 5 * * *"
-  workflow_dispatch:
+  workflow_dispatch: {}
+  push:
+    branches:
+    - ci
 
 jobs:
   update-version:
