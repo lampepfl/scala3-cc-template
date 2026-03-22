@@ -4,7 +4,6 @@ set -e
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 BUILD_FILE="$SCRIPT_DIR/../../build.sbt"
-export GIT_CONFIG="$SCRIPT_DIR/.gitconfig"
 
 LATEST_NIGHTLY=$("$SCRIPT_DIR"/latest-nightly.sc)
 
@@ -18,5 +17,8 @@ fi
 echo "Latest nightly updated to $LATEST_NIGHTLY"
 
 git add "$BUILD_FILE"
-git commit -m "Update Scala version to $LATEST_NIGHTLY"
+git commit \
+  -c user.name="GitHub Actions" \
+  -c user.email="nki@fastmail.com" \
+  -m "Update Scala version to $LATEST_NIGHTLY"
 git push
