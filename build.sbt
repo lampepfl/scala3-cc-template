@@ -1,4 +1,4 @@
-val scala3Version = "3.8.4-RC1-bin-20260402-44bbcdf-NIGHTLY"
+val scala3Version = "3.8.5-RC1-bin-20260403-ecf8e5c-NIGHTLY"
 ThisBuild / resolvers += Resolver.scalaNightlyRepository
 
 lazy val root = project
